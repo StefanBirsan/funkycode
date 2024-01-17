@@ -33,3 +33,13 @@ def process(data):
     else:
         result.append(p)
     return result
+
+
+def read(in_file):
+    file = open(in_file, "r")
+    lists = []
+    lines = file.readlines()
+    for line in lines:
+        line = line.split()
+        lists.append(process(line))
+    return lists
