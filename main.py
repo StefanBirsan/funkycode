@@ -26,12 +26,12 @@ def process(data):
         lista_return.append(media)
     return lista_return
 
-def read(file_name,file_name2):
+def read(file_name):
     lista_return = []
     with open(file_name, 'r') as f:
         for line in f:
             lista_return.append(process([int(x) for x in line.split()]))
-    write(file_name2, lista_return)
+    return lista_return
 
 
 def write(file_name, data):
